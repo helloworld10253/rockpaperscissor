@@ -1,0 +1,159 @@
+$backgroundColor : #e5e1ee;
+$fontColor : #06425a;
+$primaryColor : #7ffbd7;
+$hoverButtonColor : #c5d5db;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: $backgroundColor;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: #f7983f;
+    
+}
+.battlefield{
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 50%;
+    
+    #p1, #p2{
+        width: 100%;
+    }
+
+    .hand-container{
+        position: relative;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        // border: 1px solid black;
+
+        .hand1{
+            position: absolute;
+            
+        }
+        .hand2{
+            position: absolute;
+        }
+    }
+}
+.img{
+    display: block;
+    width: 50%;
+    margin:80px auto 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.pick{
+    display: block;
+    width:200px;
+    margin: auto;
+    z-index: 999999;
+    padding:15px 6px;
+    font-size: 20px;
+    background-color: $fontColor;
+    border:0;
+    color: $backgroundColor;
+    cursor: pointer;
+    border-radius: 20px;
+
+    &:hover{
+        background-color: $hoverButtonColor;
+        color: $backgroundColor;
+    }
+}
+
+#result.lose{
+    background-color: #940000;
+    color: $backgroundColor;
+}
+#result.win{
+    background-color: #60c510;
+}
+#result.draw{
+    background-color: #df8600;
+}
+
+#resultComp.lose{
+    background-color: #940000;
+    color: $backgroundColor;
+}
+#resultComp.win{
+    background-color: #60c510;
+}
+#resultComp.draw{
+    background-color: #df8600;
+}
+.img-25{
+    width: 25%;
+    cursor: pointer;
+}
+
+.choice-container{
+    padding:20px 0 10px 0 ;
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transition: all 100ms ease;
+    pointer-events: none;
+}
+.choice-container.fade{
+    opacity: 1;
+    pointer-events: auto;
+}
+#result{
+    border: solid 6px #555555;
+    background-color: #60c510;
+    color: #555555;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#resultComp{
+    @extend #result; 
+}
+
+.scores{
+    @extend #result;
+    background-color: #555555;
+    color: $backgroundColor;
+    padding: 4px 10px;
+    width: 50px;
+    display: block;
+    text-align: center;
+}
+
+.hand1{
+    transform: rotate(50deg);
+}
+.hand2{
+    transform: rotate(-50deg);
+}
+
+.plus{
+    color: #555555;
+    font-size: 35px;
+    opacity: 0;
+    transition: all 1s ease-in ;
+}
+
+.plus.fade{
+    opacity: 1;
+}

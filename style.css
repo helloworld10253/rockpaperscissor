@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e5e1ee;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  position: relative;
+  background-color: #f7983f;
+}
+
+.battlefield {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  width: 50%;
+}
+
+.battlefield #p1, .battlefield #p2 {
+  width: 100%;
+}
+
+.battlefield .hand-container {
+  position: relative;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.battlefield .hand-container .hand1 {
+  position: absolute;
+}
+
+.battlefield .hand-container .hand2 {
+  position: absolute;
+}
+
+.img {
+  display: block;
+  width: 50%;
+  margin: 80px auto 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pick {
+  display: block;
+  width: 200px;
+  margin: auto;
+  z-index: 999999;
+  padding: 15px 6px;
+  font-size: 20px;
+  background-color: #06425a;
+  border: 0;
+  color: #e5e1ee;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.pick:hover {
+  background-color: #c5d5db;
+  color: #e5e1ee;
+}
+
+#result.lose, .lose#resultComp, .lose.scores {
+  background-color: #940000;
+  color: #e5e1ee;
+}
+
+#result.win, .win#resultComp, .win.scores {
+  background-color: #60c510;
+}
+
+#result.draw, .draw#resultComp, .draw.scores {
+  background-color: #df8600;
+}
+
+#resultComp.lose {
+  background-color: #940000;
+  color: #e5e1ee;
+}
+
+#resultComp.win {
+  background-color: #60c510;
+}
+
+#resultComp.draw {
+  background-color: #df8600;
+}
+
+.img-25 {
+  width: 25%;
+  cursor: pointer;
+}
+
+.choice-container {
+  padding: 20px 0 10px 0;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  opacity: 0;
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
+  pointer-events: none;
+}
+
+.choice-container.fade {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#result, #resultComp, .scores {
+  border: solid 6px #555555;
+  background-color: #60c510;
+  color: #555555;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.scores {
+  background-color: #555555;
+  color: #e5e1ee;
+  padding: 4px 10px;
+  width: 50px;
+  display: block;
+  text-align: center;
+}
+
+.hand1 {
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+.hand2 {
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+}
+
+.plus {
+  color: #555555;
+  font-size: 35px;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.plus.fade {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

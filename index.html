@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1 style="font-size: 80px;">Rock Paper Scissors</h1>
+        <div class="battlefield">
+            <div id="p1">
+                <h1 id="result" class="">WIN</h1>
+                <br>
+                <h2 class="text-center">
+                    You<span class="score1 scores">0</span><span class="plus" id="player1"> +1</span>
+                </h2>
+                <br>
+                <div class="hand-container"><img class="img hand1" src="./rock-left.png" alt="" id="playerchoice"></div>
+                <button class="pick">Pick</button>
+                <div class="choice-container">
+                    <img class="img-25 choice" src="./rock-left.png" alt="" data-choice="rock-left">
+                    <img class="img-25 choice" src="./scissors-left.png" alt="" data-choice="scissors-left">
+                    <img class="img-25 choice" src="./paper-left.png" alt="" data-choice="paper-left">
+                </div>
+                
+            </div>
+            <div id="p2">
+                <h1 id="resultComp" class="">WIN</h1>
+                <br>
+                <h2 class="text-center">Computer
+                    <span class="score2 scores">0</span></span><span class="plus" id="player2"> +1</span></h2>
+                <br>
+                <div class="hand-container"><img class="img hand2" src="./rock.png" alt="" id="computerchoice"></div>
+                
+            </div>
+        </div>
+        
+        
+
+        
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
