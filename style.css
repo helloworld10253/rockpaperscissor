@@ -24,6 +24,7 @@ body {
           justify-content: center;
   width: 50%;
   margin: 50px auto;
+  position: relative;
 }
 
 .battlefield #p1, .battlefield #p2 {
@@ -48,6 +49,60 @@ body {
 
 .battlefield .hand-container .hand2 {
   position: absolute;
+}
+
+.battlefield .winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: solid 10px #302f2f;
+  background-color: #60c510;
+  height: 20%;
+  width: 60%;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.battlefield .winner .btnWinner {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #c77100;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.battlefield .winner .btnWinner:hover {
+  background-color: #8a5004;
+}
+
+.winner.fade {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tag {
+  text-align: center;
+  font-size: 40px;
 }
 
 .img {
@@ -193,7 +248,7 @@ body {
   }
   .battlefield {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     padding: 40px;
     margin-top: 0;
   }
@@ -208,6 +263,55 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .battlefield .winner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: solid 10px #302f2f;
+    background-color: #60c510;
+    height: 20%;
+    width: 60%;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    pointer-events: none;
+  }
+  .battlefield .winner .btnWinner {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #c77100;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+  .battlefield .winner .btnWinner:hover {
+    background-color: #8a5004;
+  }
+  .winner.fade {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .tag {
+    text-align: center;
   }
   .img {
     width: 50%;
@@ -247,7 +351,7 @@ body {
   }
   .battlefield {
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     padding: 40px;
     margin-top: 0;
   }
@@ -263,6 +367,54 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .battlefield .winner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: solid 10px #302f2f;
+    background-color: #60c510;
+    height: 20%;
+    width: 80%;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    pointer-events: none;
+  }
+  .battlefield .winner .btnWinner {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #c77100;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+  .battlefield .winner .btnWinner:hover {
+    background-color: #8a5004;
+  }
+  .tag {
+    text-align: center;
+  }
+  .winner.fade {
+    opacity: 1;
+    pointer-events: auto;
+  }
   .img {
     width: 80%;
     margin: 0 auto;
@@ -273,6 +425,7 @@ body {
   }
   .hand-container {
     height: 80px;
+    margin-top: 0;
   }
   .results, #result, #resultComp, .scores, #resultComp {
     max-width: 120px;
@@ -290,7 +443,7 @@ body {
   }
   .pick {
     width: 80px;
-    margin: 10px auto 10px auto;
+    margin: 10px auto 0 auto;
     padding: 5px 10px;
   }
   .choice {

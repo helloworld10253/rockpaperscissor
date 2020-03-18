@@ -1,5 +1,10 @@
 let cmpChoice = document.querySelector("#computerchoice");
-let p1Choice = document.querySelector("#playerchoice");//funtions
+let winner = document.querySelector(".winner");
+let p1Choice = document.querySelector("#playerchoice");
+let p1Score = document.querySelector(".score1");
+let p2Score = document.querySelector(".score2");
+    //funtions
+
 function shake(){
    
     let updown = setInterval(up, 5)
@@ -34,8 +39,6 @@ function shake(){
 function showResult(result){
     let resultText = document.querySelector("#result");
     let resultText2 = document.querySelector("#resultComp");
-    let p1Score = document.querySelector(".score1");
-    let p2Score = document.querySelector(".score2");
     let plus1 = document.querySelector("#player1");
     let plus2 = document.querySelector("#player2");
 
@@ -50,6 +53,7 @@ function showResult(result){
         turn(".score2");
         resultText2.innerHTML = "WIN";
         score2 ++;
+        checkScore(score1, score2)
     }else if(result ==="win"){
         resultText.classList.toggle("win");
         resultText2.classList.toggle("lose");
@@ -58,12 +62,14 @@ function showResult(result){
         setTimeout( ()=> plus1.classList.toggle("fade"), 800);
         turn(".score1");
         score1 ++;
+        checkScore(score1, score2)
     }else{
         resultText.classList.toggle("draw");
         resultText2.classList.toggle("draw");
         resultText2.innerHTML = "TIE";
     }
 
+    
     
     function turn(player) {
         let ta = 0;
@@ -74,10 +80,22 @@ function showResult(result){
                 console.log(player);
                 document.querySelector(player).style.transform = "rotateY("+ ta +"deg)"
             }
-        }, 5);
+        }, 1);
     }
 
-    
+    function checkScore(score1, score2){
+        
+        let winnerText = document.querySelector(".winner h1");
+        if(score1 == 5){
+            winnerText.innerHTML = "You Win!"
+            winner.style.backgroundColor = "#60c510";
+            winner.classList.toggle("fade");
+        }else if(score2 == 5){
+            winnerText.innerHTML = "You Lose!"
+            winner.style.backgroundColor = "#940000";
+            winner.classList.toggle("fade");
+        }
+    }
 
     setTimeout(() => {
         p1Score.innerHTML = score1;
@@ -103,7 +121,16 @@ let score2 = 0;//player 2 score
 
 pick.addEventListener("click", showChoices);
 
-
+let btnWinner = document.querySelector(".btnWinner");
+btnWinner.addEventListener("click", ()=> {
+    winner.classList.toggle("fade");
+    score1 = 0;
+    score2 = 0;
+    p1Score.innerHTML = score1;
+    p2Score.innerHTML = score2;
+    cmpChoice.setAttribute("src", "rock.png")
+    p1Choice.setAttribute("src", "rock-left.png")
+});
 
 // pick choices
 let choice = document.querySelectorAll(".choice");
@@ -122,7 +149,7 @@ Array.from(choice).forEach(n => {
         }, 500);
         cmpChoice.setAttribute("src", "rock.png")
         p1Choice.setAttribute("src", "rock-left.png")
-        setTimeout(()=> battle(p1) , 1500);
+        setTimeout(()=> battle(p1) , 1300);
         console.log(p1);
 
     });
