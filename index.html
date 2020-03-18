@@ -8,14 +8,16 @@
 </head>
 <body>
     <div id="container">
-        <h1 style="font-size: 80px;">Rock Paper Scissors</h1>
+        
+        <h1 class="title">Rock Paper Scissors</h1>
         <div class="battlefield">
             <div id="p1">
-                <h1 id="result" class="">WIN</h1>
+                <h1 id="result" class="results">WIN</h1>
                 <br>
-                <h2 class="text-center">
-                    You<span class="score1 scores">0</span><span class="plus" id="player1"> +1</span>
-                </h2>
+                <h1 class="text-center">You</h1>
+                <span class="score1 scores">0</span>
+                <span class="plus" id="player1"> +1</span>
+                
                 <div class="hand-container"><img class="img hand1" src="./rock-left.png" alt="" id="playerchoice"></div>
                 <button class="pick">Pick</button>
                 <div class="choice-container">
@@ -26,11 +28,10 @@
                 
             </div>
             <div id="p2">
-                <h1 id="resultComp" class="">WIN</h1>
+                <h1 id="resultComp" class="results">WIN</h1>
                 <br>
-                <h2 class="text-center">Computer
-                    <span class="score2 scores">0</span></span><span class="plus" id="player2"> +1</span>
-                </h2>
+                <h1 class="text-center">Computer</h1>
+                <span class="score2 scores">0</span></span><span class="plus" id="player2"> +1</span>
                 <div class="hand-container"><img class="img hand2" src="./rock.png" alt="" id="computerchoice"></div>
                 
             </div>

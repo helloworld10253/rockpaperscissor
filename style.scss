@@ -10,26 +10,21 @@ $hoverButtonColor : #042f41;
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: $backgroundColor;
+    background-color: #f7983f;
 }
 #container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   
-    align-items: center;
     height: 100vh;
-    position: relative;
     background-color: #f7983f;
     
 }
 .battlefield{
     display:flex;
     justify-content: center;
-    margin-top: 50px;
     width: 50%;
-    
+    margin: 50px auto;
     #p1, #p2{
-        width: 100%;
+        width: 50%;
+        margin: 0 auto;
     }
 
     .hand-container{
@@ -101,6 +96,11 @@ body{
     cursor: pointer;
 }
 
+.choice:hover{
+    background-color: #d86c07;
+    border-radius: 10px;
+}
+
 .choice-container{
     padding:20px 0 10px 0 ;
     width: 90%;
@@ -121,9 +121,9 @@ body{
     color: #555555;
     border-radius: 10px;
     padding: 10px 20px;
-    width: 200px;
     text-align: center;
     margin: 0 auto;
+    width: 200px;
 }
 
 #resultComp{
@@ -137,6 +137,7 @@ body{
     padding: 4px 10px;
     width: 50px;
     display: block;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -148,12 +149,23 @@ body{
 }
 
 .plus{
+    display: block;
+    text-align: center;
     color: #555555;
     font-size: 35px;
     opacity: 0;
     transition: all 1s ease-in ;
+    margin: 0 auto;
 }
 
 .plus.fade{
     opacity: 1;
 }
+
+.title {
+    font-size: 60px;
+    text-align: center;
+}
+
+@import "./tablet";
+@import "./phone";
