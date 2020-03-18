@@ -312,6 +312,7 @@ body {
   }
   .tag {
     text-align: center;
+    font-size: 34px;
   }
   .img {
     width: 50%;
@@ -410,6 +411,7 @@ body {
   }
   .tag {
     text-align: center;
+    font-size: 25px;
   }
   .winner.fade {
     opacity: 1;
