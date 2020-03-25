@@ -15,7 +15,10 @@ body{
 #container{
     height: 100vh;
     background-color: #f7983f;
-    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .battlefield{
     display:flex;
@@ -207,6 +210,8 @@ body{
     font-size: 60px;
     text-align: center;
 }
-
+.results{
+    text-align: center;
+}
 @import "./tablet";
 @import "./phone";
