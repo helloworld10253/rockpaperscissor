@@ -69,7 +69,8 @@
     .hand-container{
         height: 80px;
         margin-top:0;
-
+        display: flex;
+        justify-content: space-around;
         img{
             width: 100%;
         }
