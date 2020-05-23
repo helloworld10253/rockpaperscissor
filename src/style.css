@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,14 +18,14 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .battlefield {
@@ -33,14 +33,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 50%;
   margin: 50px auto;
   position: relative;
 }
 
-.battlefield #p1, .battlefield #p2 {
+.battlefield #p1,
+.battlefield #p2 {
   width: 50%;
   margin: 0 auto;
 }
@@ -52,8 +53,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .battlefield .hand-container .hand1 {
@@ -69,7 +70,7 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border: solid 10px #302f2f;
   background-color: #60c510;
   height: 20%;
@@ -79,15 +80,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -147,16 +148,22 @@ body {
   color: #e5e1ee;
 }
 
-#result.lose, .lose#resultComp, .lose.scores {
+#result.lose,
+.lose#resultComp,
+.lose.scores {
   background-color: #940000;
   color: #e5e1ee;
 }
 
-#result.win, .win#resultComp, .win.scores {
+#result.win,
+.win#resultComp,
+.win.scores {
   background-color: #60c510;
 }
 
-#result.draw, .draw#resultComp, .draw.scores {
+#result.draw,
+.draw#resultComp,
+.draw.scores {
   background-color: #df8600;
 }
 
@@ -191,7 +198,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   opacity: 0;
   -webkit-transition: all 100ms ease;
   transition: all 100ms ease;
@@ -203,7 +210,9 @@ body {
   pointer-events: auto;
 }
 
-#result, #resultComp, .scores {
+#result,
+#resultComp,
+.scores {
   border: solid 6px #555555;
   background-color: #60c510;
   color: #555555;
@@ -226,12 +235,12 @@ body {
 
 .hand1 {
   -webkit-transform: rotate(50deg);
-          transform: rotate(50deg);
+  transform: rotate(50deg);
 }
 
 .hand2 {
   -webkit-transform: rotate(-50deg);
-          transform: rotate(-50deg);
+  transform: rotate(-50deg);
 }
 
 .plus {
@@ -275,18 +284,18 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .battlefield .winner {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     border: solid 10px #302f2f;
     background-color: #60c510;
     height: 20%;
@@ -296,15 +305,15 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     opacity: 0;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -339,7 +348,11 @@ body {
     font-size: 40px;
     margin-top: 30px;
   }
-  .results, #result, #resultComp, .scores, #resultComp {
+  .results,
+  #result,
+  #resultComp,
+  .scores,
+  #resultComp {
     max-width: 130px;
   }
   .text-center {
@@ -373,23 +386,23 @@ body {
     margin-top: 0;
   }
   .battlefield .hand-container {
-    height: 150px;
+    height: 250px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .battlefield .winner {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     border: solid 10px #302f2f;
     background-color: #60c510;
     height: 20%;
@@ -399,15 +412,15 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     opacity: 0;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -449,12 +462,16 @@ body {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   .hand-container img {
     width: 100%;
   }
-  .results, #result, #resultComp, .scores, #resultComp {
+  .results,
+  #result,
+  #resultComp,
+  .scores,
+  #resultComp {
     max-width: 120px;
     font-size: 25px;
   }
